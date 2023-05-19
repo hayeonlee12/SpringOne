@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.codingbox.sprip.member.MemberRepository">
+    <select id="overlappedID" parameterType="MemberForm" resultType="int">
+		select count(userid) From Member where userid=#{userid}
+	</select>
+</mapper>
