@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <div id="header_logo">
+        <a><img src="./img/small_logo.png"><span>SPRIP</span></a>
+    </div>
+    <div id="header_menu">
+        <a>항공권예약</a>
+        <a>숙소예약</a>
+        <a>여행지검색</a>
+        <a>고객센터</a>
+        <a id="header_login">로그인</a>
+        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
+    </div>
+</header> 
+<main>
+    <div class="mypage_title">
+        <div class="mypage_title_name">
+            <img src="./img/logo.png">
+            <span style="color:#00BEA7">USERID</span><span>님</span>
+            <a>개인정보 수정<i class="bi bi-arrow-right-short"></i></a>
+        </div>
+        <div class="mypage_title_info">
+            <div class="mypage_info_div">
+                <span class="mypage_info_title">등급</span><br><span class="mypage_info_bold">VVIP</span>
+            </div>
+            <div class="mypage_info_div" style="color:#A99D9D; font-size:30px;margin-top:3px;">|</div>
+            <div class="mypage_info_div">
+                <span class="mypage_info_title">마일리지</span><br><span class="mypage_info_bold">3,500P</span>
+            </div>
+        </div>
+    </div>
+    <hr class="color_line">
+    <div id="mypage_edit_confirm">
+        <p>개인정보 수정을 위해 비밀번호 확인을 진행합니다.</p>
+        <form id="mypage_edit_confirm_form">
+            <label>비밀번호 확인<input type="password" class="color_input"></label>
+            <button class="color_button" type="submit">확인</button>
+        </form>
+    </div>
+</main>
+<footer>
+</footer>
+</body>
+</html>

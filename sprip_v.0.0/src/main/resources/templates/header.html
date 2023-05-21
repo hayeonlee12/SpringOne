@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+	<header id="header" th:fragment="header">
+	    <div id="header_logo">
+	        <a><img src="./img/small_logo.png"><span>SPRIP</span></a>
+	    </div>
+	    <div id="header_menu">
+	        <a>항공권예약</a>
+	        <a>숙소예약</a>
+	        <a>여행지검색</a>
+	        <a href = "/qna/new">고객센터</a>
+	        <a id="header_login">로그인</a>
+	        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
+	    </div>
+	</header> 
+</body>
+</html>

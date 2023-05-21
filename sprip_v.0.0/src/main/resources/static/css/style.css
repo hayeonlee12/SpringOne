@@ -1,0 +1,1089 @@
+html {  font-family: 'Noto Sans KR', sans-serif;    }
+body {  margin:0; }
+main { width:80%; margin: 0 auto; }
+ 
+header{
+    height:80px;
+}
+a:hover{
+    cursor: pointer;
+}
+footer{
+    width:90%;
+    margin: 150px auto 5px auto;
+    background-image: url(./img/footer.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:250px;
+    clear:both;
+}
+ 
+#header_logo{
+    display: inline;
+}
+#header_logo a{
+    display: inline-block;
+    line-height:80px;
+    margin-left:10%;
+}
+#header_logo a:hover{
+    cursor:pointer;
+}
+#header_logo img{
+    width:40px;
+    vertical-align:middle;
+    transform: translate(0%,-15%);
+}
+#header_logo span{
+    font-size: 35px;
+    margin-left:10px;
+    font-weight: 900;
+    color: #00BEA7;
+}
+#header_menu{
+    float: right;
+    line-height:80px;
+    margin-right:10%;
+}
+#header_menu a{
+    font-weight: bold;
+    font-size:18px;
+    margin:0px 20px;
+}
+#header_menu a:hover{
+    color:#00BEA7;
+    cursor:pointer;
+    font-weight: 700;
+}
+#header_login {
+    color:white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 1px 30px;
+}
+#header_login:hover{
+    color:#00BEA7;
+    background-color: white;
+    box-shadow: 0 0 0 2px #00BEA7 inset; 
+}
+#header_mypage{
+    margin-left:-5px !important;
+    position:relative;
+}
+#header_mypage i{
+    font-size: 28px;
+    position:absolute;
+    top: -110%;
+}
+#home_main{
+    width:100% !important;
+}
+#home_image {
+    height: 700px;
+    background-image: url(./img/home_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size : cover;
+    margin : 0;
+    width:100% !important
+}
+#home_contents{
+    width:90%;
+    margin: 0 auto;
+    padding:100px 0px 0px 50px;
+    color:white;
+}
+#home_contents h1{
+    margin-left:10%;
+    font-size:80px;
+    text-shadow: 3px 2px 3px grey;
+    line-height: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 6px;
+    margin: 10px 10%;
+}
+#home_contents h3{
+    margin-left:10%;
+    font-size:20px;
+    line-height: 80px;
+    letter-spacing: 6px;
+    margin-top:0;
+}
+
+#home_plane{
+    width:80%;
+    margin: 150px 10% 0px 10% ;
+    display: inline-flex;
+}
+
+#home_plane_input{
+    display: inline-block;
+    background-color: white;
+    width:80%;
+    height: 100px;
+    opacity: 80%;
+    border-radius:50px;
+    padding : 0 30px;
+    box-sizing: border-box;
+}
+#home_plane_input label{
+    color:black;
+    display: inline-block;
+    width:14%;
+    font-weight: bold;
+    margin :25px 8px;
+}
+
+#home_plane_input select{
+    display: inline-block;
+    background-color: white;
+    width:90%;
+    border:none;
+}
+#home_plane_button{
+    display: inline-block;
+    width:15%;
+    height: 80px;
+    border-radius:40px;
+    margin:10px 20px;
+    font-size: 20px;
+    line-height: 80px;
+}
+#home_list_title{
+    line-height: 50px;
+    margin: 130px auto 20px auto;
+    background-color: #74F3D5;
+    width:200px;
+    height: 50px;
+    font-size:20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+}
+#home_list_label{
+    margin: 0 auto;
+    width:150px;
+    text-align: center;
+}
+#home_list_label span:hover{
+    font-weight: bold;
+}
+#home_list{
+    width:90%;
+    margin: 0 auto;
+}
+#home_list_container{
+    box-sizing: border-box;
+    width:100%;
+    display:inline-flex;
+    justify-content: space-between;
+    padding:30px 10rem;
+    margin: 30px auto;
+}
+.home_list_card{
+    width:16rem;
+    height:160px;
+    background-image: url(./img/example.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size : cover;
+    position:relative;
+}
+.home_list_card h2{
+    color:white;
+    position:absolute;
+    bottom:0px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#home_list_container i{
+    line-height:150px;
+    font-size:25px;
+}
+#login_container{
+    display: flex;
+    width: 60%;
+    margin:120px auto;
+    text-align: center;
+    float:left;
+    transform: translate(50%);
+}
+#signup_container{
+    display: flex;
+    width: 60%;
+    margin:120px auto;
+    float:left;
+    transform: translate(45%);
+}
+
+#login_logo, #signup_logo{
+    text-align: center;
+}
+#login_logo img{
+    width:150px;
+}
+
+#login_logo h1{
+    color:#00BEA7;
+    margin-top:10px;
+}
+#signup_logo img{
+    width:120px;
+}
+#signup_logo h2{
+    color:#00BEA7;
+    margin-top:5px;
+}
+#login_form, #signup_form{
+    margin-left:10%;
+}
+#edit_form{
+    width: 60%;
+    margin:50px auto 100px auto;
+    float:left;
+    transform: translate(35%);
+}
+#login_form input{
+    box-sizing: border-box;
+    padding: 20px;
+    height:60px;
+    width:300px;
+    font-size: 15px;
+    margin: 5px auto;
+}
+#signup_form input, #edit_form input{
+    box-sizing: border-box;
+    padding: 20px;
+    height:25px;
+    width:300px;
+    font-size: 13px;
+    margin: 5px auto;
+}
+#signup_form button, #edit_form button{
+    box-sizing: border-box;
+    height:40px;
+    width:100px;
+    font-size: 15px;
+    margin: 5px auto;
+    vertical-align: center;
+    float:right;
+}
+#edit_form button{
+    margin-right:15px;
+}
+#clear{
+    clear:both;
+}
+#login_form button{
+    width:145px;
+    height:50px;
+    font-size:22px;
+    margin:6px 2px;
+}
+#signup_form span, #edit_form span{
+    display:inline-block;
+    font-weight: bold;
+    font-size:15px;
+    width:120px; 
+    text-align: left;
+}
+#login_form a{
+    font-size:15px;
+    float:right;
+    color:#A99D9D;
+}
+.mypage_title{
+    margin-top:100px;
+    width:90%;
+    margin: 100px auto 0px auto;
+}
+.mypage_title_name{
+    float:left;
+    margin-bottom:10px;
+}
+.mypage_title_name img{
+    width:80px;
+    vertical-align:middle;
+    margin-right:10px;
+}
+.mypage_title_name span{
+    font-weight: 800;
+    font-size:30px;
+    vertical-align:bottom;
+}
+.mypage_title_name a{
+    font-size:15px;
+    margin-left:10px;
+    vertical-align:bottom;
+    color:#A99D9D;
+    font-weight:500;
+    line-height:25px;
+}
+.mypage_title_info{
+    float:right;
+    margin-bottom:10px;
+    height:80px;
+}
+.mypage_info_div{
+    float:left;
+    padding-top:20px;
+    margin:0px 15px;
+}
+.mypage_info_title{
+    font-size:15px;
+    color:#A99D9D;
+}
+.mypage_info_bold{
+    font-weight:bold;
+    font-size:25px;
+    vertical-align: bottom;
+}
+#mypage_reservation, #mypage_edit{
+    width:60%;
+    margin:0 auto;
+}
+.reservation_blank, .ask_blank {
+    text-align: center;
+    color: #00BEA7;
+}
+#mypage_reservation hr{
+    border : solid 1px #00BEA7;
+}
+.mypage_serve_title{
+    margin:100px auto;
+}
+.mypage_serve_title h3{
+    font-size:20px;
+    float:left;
+    line-height:50px;
+    margin:0;
+}
+.mypage_serve_title i{
+    color: #00BEA7;
+    margin-right:10px;
+}
+.mypage_serve_title a{
+    color: #00BEA7;
+    font-size:18px;
+    font-weight: bold;
+    float:right;
+    line-height:50px;
+    vertical-align: middle;
+}
+.reservation_card, .hotel_card{
+    margin: 20px auto;
+    box-shadow: 0 0 0 1.5px #00BEA7 inset; 
+    border-radius: 15px;
+}
+.hotel_reservation_card, .hotel_card{
+    height:170px;
+}
+.plane_reservation_card label{
+    width: 120px !important;
+}
+.plane_reservation_card{
+    height:170px;
+}
+.plane_card_logo {
+    height:140px;
+    width:200px;
+    float: left;
+    margin:15px 15px;
+    text-align: center;
+}
+.plane_card_logo img{
+    width:80px;
+    transform: translate(0%,30%);
+}
+.hotel_reservation_card img, .hotel_card img{
+    width:200px;
+    height:140px;
+    object-fit: cover;
+    margin:15px 15px;
+    float: left;
+}
+.reservation_card_detail, .hotel_card_detail{
+    float: left;
+    margin: 15px;
+}
+.reservation_card p, .hotel_card p{
+    margin:3px;
+    font-size:14px;
+}
+.reservation_card label, .hotel_card label{
+    width:90px;
+    display: inline-block;
+}
+.reservation_card_price, .hotel_card_price{
+    float: right;
+    text-align: center;
+    transform: translate(-40%, 25%);
+}
+.reservation_card_price h3{
+    line-height:30px;
+}
+.reservation_card_price button, .hotel_card_price button{
+    width:100px;
+    height:35px;
+    font-size:15px;
+    margin-top:20px;
+}
+#mypage_ask{
+    width:60%;
+    margin:0 auto;
+}
+.color_select{
+    box-sizing: border-box;
+    border:none;
+    box-shadow: 0 0 0 2px #00BEA7 inset; 
+    border-radius:12px;
+    vertical-align: bottom;
+    width: 180px;
+    height:30px;
+    margin-left:20px;
+    padding:5px 10px;
+    font-weight: bold;
+    margin-top:12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#mypage_ask_bar{
+    clear:both;
+}
+#mypage_ask_bar span{
+    float:right;
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+}
+#mypage_ask_container{
+    margin: 20px 0px 250px 0px;
+}
+.ask_bar_text{
+    width:140px;
+    text-align: center;
+    font-weight: bold;
+}
+.ask_list_left{
+    float:left;
+    width:80px;
+    text-align: center;
+}
+.ask_list_right{
+    float:right;
+    width:142px;
+    text-align: center;
+}
+.mypage_ask_list span{
+    font-size: 15px;
+    margin:5px 0px;
+}
+#mypage_edit_confirm{
+    width:60%;
+    margin:200px auto;
+}
+#mypage_edit_confirm p{
+    text-align: center;
+}
+#mypage_edit_confirm_form{
+    text-align: center;
+}
+#mypage_edit_confirm label{
+    font-weight: bold;
+}
+#mypage_edit_confirm input{
+    width:300px;
+    height:35px;
+    margin:0px 5px 0px 30px;
+}
+#mypage_edit_confirm button{
+    width:100px;
+    height:35px;
+    font-size:15px;
+    transform: translate(0%, 5%);
+}
+#service_main{
+    width:100% !important;
+}
+#service_title{
+    background: linear-gradient(#18EAB7, white);
+    height:400px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top:150px;
+}
+#service_title h1{
+    color:#00BEA7;
+    font-weight: 800;
+    font-size:45px;
+    margin:0px;
+    text-shadow: 3px 2px 3px white;
+}
+#service_title h2{
+    color:white;
+    margin: 10px 0px 50px 0px;
+    text-shadow: 3px 2px 3px #C2C2C2;
+}
+#service_Qcontainer,#service_inquiry{
+    margin:150px auto;
+    text-align: center;
+}
+#service_Qcontainer h2,#service_inquiry h2{
+    margin:0px;
+}
+#service_Qcontainer p, #service_inquiry p{
+    margin:5px;
+}
+#service_Qcontainer button{
+    width:45%;
+    height:50px;
+    margin: 30px 5px;
+    font-size:20px;
+}
+#service_Qlistcontainer{
+    width:35%;
+    margin:100px auto;
+}
+.service_qlist{
+    text-align: left;
+    margin:5px auto;
+}
+.service_qlist i{
+    font-size:25px;
+    vertical-align: middle;
+    float:right;
+    color:#00BEA7;
+}
+.qlist_Q{
+    color:#00BEA7;
+    font-weight: 900;
+    font-size:20px;
+    margin-right: 20px;
+}
+#service_inquiryform{
+    width:40%;
+    margin:100px auto;
+    text-align: center;
+}
+#service_inquiryform label{
+    font-weight:bold;
+    margin-right:10px;
+}
+#service_inquiryform input{
+    width:65%;
+    height:35px;
+    border-radius: 10px;
+    border : solid 2px #00BEA7;
+}
+#service_inquiryform button{
+    margin-left:5px;
+    width:15%;
+    height:35px;
+    transform: translate(0%, 5%);
+    border-radius: 10px;
+}
+#service_inquiryform textarea{
+    width:90%;
+    padding:10px;
+    margin:15px 0px;
+    border : solid 2px #00BEA7;
+    border-radius: 10px;
+    height:300px;
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+.page_background{
+    width:100% !important;
+}
+.page_background h1{
+    color:white;
+    font-size:35px;
+    text-shadow: 3px 2px 3px #C2C2C2;
+    margin-left:20%;
+    padding-top:230px;
+}
+#plane_title{
+    background-image: url(./img/plane.jpg);
+    height:500px;
+    background-size: cover;
+}
+#hotel_title{
+    background-image: url(./img/hotel.jpg);
+    height:300px;
+    background-size: cover;
+    background-position: center;
+}
+#travelspot_title{
+    background-image: url(./img/travelspot.jpg);
+    height:500px;
+    background-size: cover;
+    background-position: center;
+}
+#travelspot_title h1{
+    padding-top:350px;
+    margin-left:20%;
+    color:white;
+    margin-bottom:10px;
+}
+#travelspot_title h2{
+    margin-left:20%;
+    color:white;
+    margin-top:0px;
+}
+
+#plane_form{
+    width:60%;
+    height:130px;
+    background-color: white;
+    border-radius: 20px;
+    margin:0px 20% ;
+    box-sizing: border-box;
+    padding:25px 35px;
+}
+#plane_form i{
+    font-size:20px;
+    vertical-align: middle;
+}
+#plane_form button{
+    width:80px;
+    height:30px;
+    font-size:15px;
+}
+#plane_form input{
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    height:25px;
+    width:150px;
+    border: 1px solid lightgray;
+}
+.plane_form_select{
+    border:none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight:bold;
+    font-size:15px;
+    vertical-align: middle;
+    appearance:none;
+    margin-right:20px;
+    padding:0px 10px;
+}
+.plane_form_select::placeholder{
+    color:black !important;
+}
+#plane_form img{
+    width:25px;
+    vertical-align: middle;
+}
+#plane_cards{
+    width:60%;
+    margin:150px auto;
+}
+.plane_cardlist{
+    margin: 50px 0px;
+}
+.plane_cardcontainer{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.plane_card, .plane_recommend_card{
+    height:240px;
+    width:170px;
+    border: 1px solid #18EAB7;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative; 
+}
+.plane_recommend_card{
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    padding:10px;
+}
+.korea_recommend_card{
+    background-image: url(./img/korea_example.jpg);
+}
+.abroad_recommend_card{
+    background-image: url(./img/abroad_example.jpg);
+}
+.plane_recommend_card h2{
+    color:white; 
+}
+.plane_recommend_card button{
+    height:30px;
+    width:150px;
+    bottom:10px;
+    font-size:15px;
+    position:absolute;
+    border-radius:10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.plane_card_text{
+    padding:5px 10px;
+}
+.plane_card_text i{
+    color : #00BEA7;
+    margin:0px 3px;
+}
+.plane_card_text h4{
+    margin:0px;
+    font-size:18px;
+}
+.plane_card img{
+    height:150px;
+    min-width:170px;
+    object-fit: cover;
+}
+.plane_card_price{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+}
+#plane_card_price{
+    font-size:20px;
+    font-weight: bold;
+    margin-left:3px;
+}
+#plane_list{
+    width:60%;
+    margin: 80px auto;
+}
+#plane_select{
+    float:left;
+    width:30%;
+    height:500px;
+}
+#airline_select input{
+    margin-right:10px;
+    width: 15px;
+    height: 15px;
+    border:1px solid #707070;
+    line-height:30px;
+}
+#airline_select label{
+    line-height:30px;
+}
+#time_select label{
+    font-weight: bold;
+    font-size:15px;
+} 
+#time_select input{
+    width:60px;
+    border:none;
+    margin: 10px 0px;
+    font-size:15px;
+} 
+#time_select input::placeholder{
+    font-weight: 400;
+} 
+#plane_selected_list{
+    float:right;
+    width:70%;
+    height:500px;
+    margin-top:18px;
+    margin-bottom: 200px;
+}
+.plane_selected_card{
+    border : 2px solid #00BEA7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding:10px;
+    margin: 10px auto;
+}
+.plane_selected_airline{
+    margin: 0px 20px;
+}
+.plane_selected_duration{
+    display: inline-block;
+    color:#A99D9D;
+    font-size: 13px;
+    text-align: center;
+}
+.plane_selected_duration hr{
+    width:100px;
+    margin:0px;
+}
+.plane_selected_time{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 20px;
+}
+.plane_selected_pricelabel{
+    color:#A99D9D;
+    font-size: 15px;
+    margin-right:5px;
+}
+.plane_selected_price{
+    font-size: 20px;
+    font-weight: bold;
+}
+.plane_selected_card button{
+    height:35px;
+    font-size: 15px;
+    width:70px;
+    margin-left: 10px;
+}
+#plane_payment{
+    width:60%;
+    margin:150px auto;
+}
+#plane_payment h1{
+    color:black;
+    text-shadow: none;
+    padding:0px;
+    margin:30px 0px;
+}
+#plane_payment i{
+    margin: 0px 20px;
+}
+.plane_info_card, .plane_payment_card{
+    border : 2px solid #00BEA7;
+    border-radius: 10px;
+    padding:30px 20px;
+    margin: 10px auto;
+}
+.plane_info_card img{
+    width:50px;
+    vertical-align: middle;
+    margin-left:20px;
+}
+.plane_info_airline{
+    margin: 0px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.plane_info_date{
+    font-size: 15px;
+    margin: 0px 15px;
+    vertical-align: middle;
+}
+.plane_info_duration{
+    display: inline-block;
+    color:#A99D9D;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+.plane_info_duration hr{
+    width:100px;
+    margin:0px;
+}
+.plane_info_time{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px 20px;
+    vertical-align: middle;
+}
+.plane_info_planename{
+    font-size: 15px;
+    vertical-align: middle;
+}
+.plane_payment_card{
+    width:40%;
+    float:left;
+}
+.plane_payment_card label{
+    display: inline-block;
+    width:150px;
+    margin: 7px 15px;
+}
+.plane_payment_card span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.plane_payment_card i{
+    font-size: 20px;
+}
+.plane_final_payment_card{
+    width:49%;
+    float:right;
+    padding:30px 20px;
+    margin: 10px auto;
+}
+.plane_final_payment_card button{
+    width: 100%;
+    height:45px;
+    font-size: 20px;
+} 
+.plane_final_price_label{
+    display:flex; 
+    justify-content:space-between;
+    font-weight: bold;
+    line-height:30px;
+}
+.plane_final_price_label label{
+    font-size: 20px;
+}
+.plane_final_option{
+    display: block;
+    margin:20px 0px;
+    text-align: right;
+    line-height: 20px;
+} 
+.plane_final_option input{
+    width:15px;
+    height:15px;
+    margin-right:10px;
+    vertical-align: middle;
+} 
+.plane_final_price{
+    font-size: 30px;
+    color: #00BEA7;
+}
+#hotel_search{
+    width: 60%;
+    margin: 0px auto;
+}
+#hotel_search h3{
+    display: inline-block;
+}
+#map{
+    width:100%;
+    height:500px;
+    background-color: #A99D9D;
+    border-radius: 10px;
+}
+#hotel_select {
+    float: right;
+    line-height: 73px;
+}
+#hotel_search_bar{
+    margin:100px auto 10px auto;
+}
+#hotel_select input{
+    width:120px;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding:2px;
+}
+#hotel_select input[type=number]{
+    font-weight: bold;
+    width:60px;
+    border:none;
+    font-size: bold;
+    padding-left: 10px;
+}
+.hotel_card_detail{
+    transform: translateY(10%);
+} 
+.hotel_card_price h3{
+    font-size: 25px;
+    margin:0px;
+} 
+#travelspot_find{
+    width:60%;
+    margin: 80px auto;
+}
+#travelspot_select{
+    float:left;
+}
+#travelspot_select h3{
+    margin-bottom:10px;
+}
+#travelspot_select button{
+    width:90px;
+    height:25px;
+    margin:5px 2px;
+}
+#travelspot_list{
+    float:right;
+    width:70%;
+    margin-top:20px;
+}
+.travelspot_list_card {
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px #00BEA7 inset; 
+    padding:10px;
+    margin: 10px 0px;
+}
+
+.travelspot_list_card img{
+    width:180px;
+    height:120px;
+}
+.travelspot_list_card h3{
+    margin:10px 0px 5px 0px;
+    font-size: 20px;
+}
+.travelspot_card_detail{
+    height:120px;
+    float: right;
+    margin-right:5%;
+}
+.travelspot_card_detail button{
+    width:100px;
+    height:30px;
+    margin:2px;
+}
+.travelspot_card_button{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin: 3% 10px;
+}
+.travelspot_card_button button{
+    width:155px;
+    height:40px;
+    margin:3px 0px;
+    font-size: 15px;
+}
+input::placeholder {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight:bold;
+    color: #A99D9D;
+}
+.page_title{
+    font-size: 35px;
+    font-weight: bold;
+    margin: 80px 0px 20px 20% ;
+}
+.color_button{
+    color:white;
+    background-color: #00BEA7;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border:none;
+}
+ 
+.color_button:hover{
+    color:#00BEA7;
+    background-color: white;
+    cursor:pointer;
+    box-shadow: 0 0 0 2px #00BEA7 inset; 
+}
+.white_button{
+    color:#00BEA7;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-shadow: 0 0 0 2px #00BEA7 inset; 
+    border:none;
+}
+.white_button:hover{
+    color:white;
+    background-color: #00BEA7;
+    cursor:pointer;
+}
+.color_icon:hover{
+    color:#00BEA7 !important;
+    cursor:pointer;
+}
+.color_line{
+    border : solid 2px #00BEA7;
+}
+.color_line_light{
+    border : solid 1px #00BEA7;
+}
+.color_input{
+    box-sizing: border-box;
+    border : solid 3px #00BEA7;
+    border-radius: 15px;
+    padding:10px;
+}
+hr{
+    clear:both;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <div id="header_logo">
+        <a><img src="./img/small_logo.png"><span>SPRIP</span></a>
+    </div>
+    <div id="header_menu">
+        <a>항공권예약</a>
+        <a>숙소예약</a>
+        <a>여행지검색</a>
+        <a>고객센터</a>
+        <a id="header_login">로그인</a>
+        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
+    </div>
+</header> 
+<main>
+    <div class="mypage_title">
+        <div class="mypage_title_name">
+            <img src="./img/logo.png">
+            <span style="color:#00BEA7">USERID</span><span>님</span>
+            <a>개인정보 수정<i class="bi bi-arrow-right-short"></i></a>
+        </div>
+        <div class="mypage_title_info">
+            <div class="mypage_info_div">
+                <span class="mypage_info_title">등급</span><br><span class="mypage_info_bold">VVIP</span>
+            </div>
+            <div class="mypage_info_div" style="color:#A99D9D; font-size:30px;margin-top:3px;">|</div>
+            <div class="mypage_info_div">
+                <span class="mypage_info_title">마일리지</span><br><span class="mypage_info_bold">3,500P</span>
+            </div>
+        </div>
+    </div>
+    <hr class="color_line">
+    <div id="mypage_ask">
+        <div class="mypage_serve_title">
+            <h3><i class="bi bi-headset"></i>1:1 문의 내역</h3>
+            <select class="color_select">
+                <option>전체 문의</option>
+                <option>진행 중인 문의</option>
+                <option>완료된 문의</option>
+            </select>
+            <div id="mypage_ask_bar">
+                <span class="ask_bar_text">답변 상태</span><span>|</span><span class="ask_bar_text">등록 날짜</span><span>|</span>
+            </div>
+            <hr class="color_line_light">
+            <div id="mypage_ask_container">
+                <p class="ask_blank">아직 문의하신 내역이 없습니다.</p> 
+                <div class="mypage_ask_list">
+                    <span class="ask_list_left">1</span><span class="ask_list_left">문의 제목</span>
+                    <span class="ask_list_right" style="color:#00BEA7">답변 대기중</span> <span class="ask_list_right">2050-05-05</span>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="mypage_ask_list">
+                    <span class="ask_list_left">1</span><span class="ask_list_left">문의 제목</span>
+                    <span class="ask_list_right" style="color:#00BEA7">답변 대기중</span> <span class="ask_list_right">2050-05-05</span>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="mypage_ask_list">
+                    <span class="ask_list_left">1</span><span class="ask_list_left">문의 제목</span>
+                    <span class="ask_list_right" style="color:#00BEA7">답변 대기중</span> <span class="ask_list_right">2050-05-05</span>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+</footer>
+</body>
+</html>

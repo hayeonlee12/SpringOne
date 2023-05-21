@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/3744ba3e08.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header id="header">
+    <div id="header_logo">
+        <a><img src="./img/small_logo.png"><span>SPRIP</span></a>
+    </div>
+    <div id="header_menu">
+        <a>항공권예약</a>
+        <a>숙소예약</a>
+        <a>여행지검색</a>
+        <a>고객센터</a>
+        <a id="header_login">로그인</a>
+        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
+    </div>
+</header> 
+<main class="page_background">
+    <div id="hotel_title">
+        <h1>호텔</h1> 
+    </div>
+    <div id="hotel_search">
+        <div id="hotel_search_bar">
+            <h3>호텔 검색</h3>
+            <div id="hotel_select">
+                <i class="bi bi-person-circle"></i>
+                <input type='number' min='1' max='10' step='1' placeholder="인원">
+                <input type="text" placeholder="체크인" onfocus="(this.type='date')" onblur="(this.type='text')">
+                &nbsp;-&nbsp;    
+                <input type="text" placeholder="체크아웃" onfocus="(this.type='date')" onblur="(this.type='text')">
+            </div>
+        </div>
+        <div id="map">지도 영역 </div>
+        <div class="hotel_card">
+            <img src="./img/hotel.jpg">
+            <div class="hotel_card_detail">
+                <p><label>장소 : </label><span>노보텔 앰배서더 서울 동대문</span></p>
+                <p><label>예약 인원 : </label><span>2</span></p>
+                <p><label>체크인 : </label><span>2050-05-05</span></p>
+                <p><label>체크아웃 : </label><span>2050-05-05</span></p>
+                <p><label>가격 : </label><span>스탠다드 더블</span> <span>150,000</span> + <span>1</span>인 추가 <span>20,000</span></p>
+            </div>
+            <div class="hotel_card_price">
+                <p>결제 가격</p>
+                <h3><span style="color:#00BEA7;">123,456</span>원</h3><br>
+                <button class="color_button">예약하기</button>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+</footer>
+</body>
+</html>

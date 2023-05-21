@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <div id="header_logo">
+        <a><img src="./img/small_logo.png"><span>SPRIP</span></a>
+    </div>
+    <div id="header_menu">
+        <a>항공권예약</a>
+        <a>숙소예약</a>
+        <a>여행지검색</a>
+        <a>고객센터</a>
+        <a id="header_login">로그인</a>
+        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
+    </div>
+</header> 
+<main id="service_main">
+    <div id="service_title">
+        <h1>SPRIP 고객센터</h1>
+        <h2>언제든지 SPRIP에서 필요한 도움을 얻으세요.</h2>
+        <img src="./img/logo.png">
+    </div>
+    <div id="service_inquiry" th:action="@{/qna/new}">
+        <h2>1:1문의</h2>
+        <p>SPRIP 전문 상담원들이 확인 후 답변해 드립니다.</p>
+        <form id="QnaForm" method="post" th:object="${qnaForm}">
+            <label th:field = "*{qnatitle}">문의 제목</label>
+            <input type="text" class="color_input" th:field = "*{qnatitle}" placeholder="문의 내용을 파악할 수 있게 입력해 주세요">
+            <button class="color_button" type = "submit">등록하기</button><br>
+            <textarea th:field = "*{qnadetail}"></textarea>
+        </form>
+    </div>
+</main>
+<footer>
+</footer>
+</body>
+</html>
