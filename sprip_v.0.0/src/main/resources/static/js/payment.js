@@ -1,68 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/3744ba3e08.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
-	<script type = "text/javascript" src = "./js/payment.js"></script>
-</head>
-<body>
-<header id="header">
-    <div id="header_logo">
-        <a><img src="./img/small_logo.png"><span>SPRIP</span></a>
-    </div>
-    <div id="header_menu">
-        <a>항공권예약</a>
-        <a>숙소예약</a>
-        <a>여행지검색</a>
-        <a>고객센터</a>
-        <a id="header_login">로그인</a>
-        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
-    </div>
-</header> 
-<main class="page_background">
-    <div id="plane_title"  style="height:300px; background-position:center"></div>
-    <div id="plane_payment">
-        <h1><span>김포</span><i class="fa-solid fa-right-long"></i><span>오사카</span></h1>
-        <div class="plane_info_card">
-            <img src="./img/example_logo.jpg">
-            <span class="plane_info_airline">대한항공</span>
-            <span class="plane_info_date">2050-05-05</span>-<span class="plane_info_date">2050-05-05</span>
-            <span class="plane_info_time">10:00</span>
-            <div class="plane_info_duration">3시간 30분<hr></div>
-            <span class="plane_info_time">10:00</span>
-            <span class="plane_info_planename">보잉 717-200</span> 
-        </div>
-        <div class="plane_payment_card">
-            <label>탑승객</label><i class="bi bi-person-circle"></i><span>2</span><br>
-            <label>좌석 등급</label><i class="bi bi-award-fill"></i><span>비즈니스석</span><br>
-            <label>항공권 가격</label><i class="fa-solid fa-won-sign"></i><span>150,000</span><br>
-        </div>
-        <div class="plane_final_payment_card">
-            <div class="plane_final_price_label" >
-                <label>총 금액</label><span class="plane_final_price">300,000</span>
-            </div>
-            <label class="plane_final_option"><input type="checkbox">좌석 미리 예약</label>
-            <button class="color_button" id="iamportTest" onclick="requestPay()">결제하기</button>
-        </div>
-    </div>
-    <div style="clear:both;"></div>
-</main>
-<footer>
-</footer>
+/**
+ *  결제 + 결제 취소 함수 담김.
+ */
 
-<!-- 결제 + 결제 취소 -->
-<script>
-// getToken 요청을 보내는 함수
+ // getToken 요청을 보내는 함수
 function getToken(callback) {
   // 요청할 URL
   var url = 'https://api.iamport.kr/users/getToken';
@@ -181,6 +121,3 @@ function cancelPay() {
       });
   });
 }
-</script>
-</body>
-</html>

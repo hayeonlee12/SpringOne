@@ -20,10 +20,31 @@ public class MemberService {
 		return member.getUserid();
 	}
 	
+	// 아이디 중복체크
     public int overlappedID(Member member) throws Exception{
 		int result = memberRepository.overlappedID(member);
 		System.out.println("service" + result);
 		return result;
 	}
+
+	public Member findOne(String userid) {
+		
+		return memberRepository.findOne(userid);
+	}
+	
+	// 회원정보 수정
+	@Transactional
+	public Member editMember(String userid, Member form) {
+		Member findMember = memberRepository.findOne(userid);
+		
+		findMember.setUsername(form.getUsername());
+		findMember.setUserpw(form.getUserpw());
+		findMember.setUserphone(form.getUserphone());
+		findMember.setUseremail(form.getUseremail());
+		
+		return findMember;
+	}
+	
+	
 	
 }

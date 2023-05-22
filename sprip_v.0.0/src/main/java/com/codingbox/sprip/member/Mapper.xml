@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.codingbox.sprip.member.MemberRepository">
     <select id="overlappedID" parameterType="MemberForm" resultType="int">
 		select count(userid) From Member where userid=#{userid}
+	</select>
+	<select resultType="String" id="login_check">
+		select name from member where userid=#{userid} and passwd=#{passwd} 
 	</select>
 </mapper>

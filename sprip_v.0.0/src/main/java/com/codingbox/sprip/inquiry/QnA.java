@@ -22,7 +22,7 @@ public class QnA {
 	private String qnadetail;
 	
 	@ManyToOne
-	@JoinColumn(name = "MEMBER_ID")
+	@JoinColumn(name = "USERID")
 	private Member member;
 	
 	

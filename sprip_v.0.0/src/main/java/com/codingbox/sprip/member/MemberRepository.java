@@ -28,4 +28,9 @@ public class MemberRepository {
 		    Long count = query.getSingleResult();
 		    return count.intValue();
 	}
+
+	public Member findOne(String userid) {
+		
+		return em.find(Member.class, userid);
+	}
 }

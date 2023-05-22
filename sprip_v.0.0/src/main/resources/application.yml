@@ -28,3 +28,9 @@ spring:
     hibernate:
       SQL: debug
       type: trace
+      
+#결제 API 키, 시크릿 키
+iamport:
+  api:
+    key: "3130886717734530"
+    secret: "rVnn8cuI8Z8AH90vW5X9KWBZpivPI6sis3DjtQpGRAFpxHA4mNgR1f0RmBiNxZwnWgI5auWuWLCYIhx3"
