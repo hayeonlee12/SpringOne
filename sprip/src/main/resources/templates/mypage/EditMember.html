@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원정보수정</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,19 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<header id="header">
-    <div id="header_logo">
-        <a><img src="/img/small_logo.png"><span>SPRIP</span></a>
-    </div>
-    <div id="header_menu">
-        <a>항공권예약</a>
-        <a>숙소예약</a>
-        <a>여행지검색</a>
-        <a>고객센터</a>
-        <a id="header_login">로그인</a>
-        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
-    </div>
-</header> 
+<header id="header" th:replace="~{fragments/header :: header}"> </header>
 <main>
     <div class="mypage_title">
         <div class="mypage_title_name">
@@ -47,27 +35,47 @@
     <hr class="color_line">
     <div id="mypage_edit">
         <div class="mypage_serve_title">
-            <h3><i class="bi bi-person-circle"></i></i>개인정보 수정</h3>
+            <h3><i class="bi bi-person-circle"></i>개인정보 수정</h3>
         </div>
         <div style="clear:both;"></div>
-        <form id="edit_form" >
+       	<form id="edit_form" method="post" th:object="${form}" >
             <span>아이디</span>
-                <input class="color_input"  type="text" placeholder="아이디를 입력하세요"><br>
+                <input class="color_input" id="userid" name="userid" th:field="*{userid}" type="text" readonly><br>
             <span>비밀번호</span>    
-                <input class="color_input" type="password" placeholder="패스워드를 입력하세요"><br>
+                <input class="color_input" type="password" id="userpw" name="userpw" th:field="*{userpw}" placeholder="패스워드를 입력하세요"><br>
+                <span class="error" th:if="${#fields.hasErrors('userpw')}" th:errors="*{userpw}" style="display: block"></span>
             <span>비밀번호 확인</span>
-                <input class="color_input" type="password" placeholder="패스워드를 한번 더 입력하세요"><br>
+                <input class="color_input" type="password" id="userpwConfirm" placeholder="패스워드를 한번 더 입력하세요"><br>
+                <span id="passwordMessage" style="display: block"></span>
             <span>이름</span>
-                <input class="color_input" type="text" placeholder="이름을 입력하세요"><br>
+                <input class="color_input" type="text" id="username" name="username" th:field="*{username}" placeholder="이름을 입력하세요"><br>
+                <span class="error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}" style="display: block"></span>
             <span>전화번호</span>
-                <input class="color_input" type="text" placeholder="전화번호를 입력하세요"><br>
+                <input class="color_input" type="text" id="userphone" name="userphone" th:field="*{userphone}" placeholder="전화번호를 입력하세요"><br>
+                <span class="error" th:if="${#fields.hasErrors('userphone')}" th:errors="*{userphone}" style="display: block"></span>
             <span>이메일</span>
-                <input class="color_input" type="text" placeholder="이메일을 입력하세요"><br>
-            <button type="submit" class="color_button" style="width:300px">수정 완료</button><br>
+                <input class="color_input" type="text" id="useremail" name="useremail" th:field="*{useremail}" placeholder="이메일을 입력하세요"><br>
+                <span class="error" th:if="${#fields.hasErrors('useremail')}" th:errors="*{useremail}" style="display: block"></span>
+            <button type="submit" class="color_button" id="signup" style="width:150px">수정 완료</button>
+            <button type="button" class="color_button" id="delete" style="width:150px" >회원 탈퇴</button><br>
         </form>
     </div>
 </main>
 <footer>
 </footer>
+    <script>
+    $(document).ready(function() {
+        // 비밀번호 확인 체크
+        $("#userpwConfirm").on("keyup", function() {
+            var password = $("#userpw").val();
+            var confirmPassword = $(this).val();
+            if (password === confirmPassword) {
+                $("#passwordMessage").text("비밀번호가 일치합니다.");
+            } else {
+                $("#passwordMessage").text("비밀번호가 일치하지 않습니다.");
+            }
+        });
+     });
+    </script>
 </body>
 </html>

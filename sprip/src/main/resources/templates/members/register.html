@@ -14,19 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<header id="header">
-    <div id="header_logo">
-        <a><img src="/img/small_logo.png"><span>SPRIP</span></a>
-    </div>
-    <div id="header_menu">
-        <a>항공권예약</a>
-        <a>숙소예약</a>
-        <a>여행지검색</a>
-        <a>고객센터</a>
-        <a id="header_login">로그인</a>
-        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
-    </div>
-</header> 
+<header id="header" th:replace="~{fragments/header :: header}"> </header>
 <main>
     <div class="page_title">
         <span style="color:#00BEA7">SPRIP </span><span>회원가입</span>
@@ -37,7 +25,7 @@
             <img src="/img/logo.png">
             <h2>SPRIP</h2>
         </div>
-        <form id="signup_form" action="/members/register" method="post" th:object="${memberForm}" >
+        <form id="signup_form" action="/members/register" method="post" th:object="${form}" >
             <span>아이디</span>
                 <input class="color_input" id="userid" name="userid" th:field="*{userid}" type="text" placeholder="아이디를 입력하세요"><br>
             	<span id="olmessage"></span>
@@ -79,6 +67,7 @@
 	                    $("#olmessage").text("사용중인 ID입니다.");
 	                    $("#olmessage").addClass("olmessagef");
 	                    $("#olmessage").removeClass("olmessaget");
+	                    $("#signup").attr("type", "button");
 	                } else {
 	                    $("#olmessage").text("사용 가능한 ID입니다.");
 	                    $("#olmessage").addClass("olmessaget");

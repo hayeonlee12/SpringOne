@@ -26,7 +26,7 @@ public class MemberController {
 
 	@GetMapping("/members/register")
 	public String registerForm(Model model){
-		model.addAttribute("memberForm", new MemberForm());
+		model.addAttribute("form", new MemberForm());
 	return "/members/register";	
 	}
 
@@ -36,7 +36,7 @@ public class MemberController {
 		
 		if (result.hasErrors()) {
 			// 실패시 입력 데이터 값 유지
-			model.addAttribute("memberForm", form);
+			model.addAttribute("form", form);
 			
 			
 			return "members/register";
@@ -58,7 +58,6 @@ public class MemberController {
 	@GetMapping("/members/idcheck") // 아이디 중복확인을 위한 값으로 따로 매핑
 	public int overlappedID(Member Member) throws Exception{
 		int result = memberService.overlappedID(Member); // 중복확인한 값을 int로 받음
-		System.out.println("controller" + result);
 
 		return result;
 	}
@@ -74,8 +73,9 @@ public class MemberController {
 		form.setUserpw(member.getUserpw());
 		form.setUserphone(member.getUserphone());
 		form.setUseremail(member.getUseremail());
+		model.addAttribute("form", form);
 		
-		return "/mypage/EditMember";
+		return "mypage/EditMember";
 	}
 	
 	//회원 정보 수정
@@ -91,11 +91,19 @@ public class MemberController {
 		
 		memberService.editMember(form.getUserid(),form);
 		
-		return "redirect:/"; //어디로 갈지 아직 안정함
+		return "redirect:/members/login"; //어디로 갈지 아직 안정함
 		
 	}
 	
 	
+	// 로그인 
+	@GetMapping("/members/login")
+	public String login() {
+		return "members/login";
+	}
+	
 	
 	// 로그아웃
+	
+	
 }

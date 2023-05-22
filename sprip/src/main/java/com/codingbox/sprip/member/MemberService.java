@@ -36,6 +36,7 @@ public class MemberService {
 	@Transactional
 	public Member editMember(String userid, Member form) {
 		Member findMember = memberRepository.findOne(userid);
+		
 		findMember.setUsername(form.getUsername());
 		findMember.setUserpw(form.getUserpw());
 		findMember.setUserphone(form.getUserphone());

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,21 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<header id="header">
-    <div id="header_logo">
-        <a><img src="/img/small_logo.png"><span>SPRIP</span></a>
-    </div>
-    <div id="header_menu">
-        <a>항공권예약</a>
-        <a>숙소예약</a>
-        <a>여행지검색</a>
-        <a>고객센터</a>
-        <a id="header_login">로그인</a>
-        <a id="header_mypage"><i class="bi bi-person-circle color_icon"></i></a>
-    </div>
-</header> 
+<header id="header" th:replace="~{fragments/header :: header}"> </header>
 <main id="home_main">
     <div id="home_image">
         <div id="home_contents">
