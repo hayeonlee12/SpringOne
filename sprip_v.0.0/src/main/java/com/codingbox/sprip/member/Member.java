@@ -22,7 +22,18 @@ public class Member {
 	private String useremail;
 	private String userphone;
 	
+	
 	// 외래키
 //	@OneToMany(mappedBy = "member")
 //	private List<Reserve> reserves = new ArrayList<>();
+	
+	public static Member toMember(MemberEntity memberEntity) {
+		Member member = new Member();
+		member.setUserid(memberEntity.getUserid());
+		member.setUsername(memberEntity.getUsername());
+		member.setUserpw(memberEntity.getUserpw());
+		member.setUseremail(memberEntity.getUseremail());
+		member.setUserphone(memberEntity.getUserphone());
+		return member;
+	}
 }

@@ -2,6 +2,8 @@ package com.codingbox.sprip.member;
 
 
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -67,14 +69,14 @@ public class MemberController {
 		Member member = memberService.findOne(userid);
 		
 		MemberForm form = new MemberForm();
-		form.setUserid(userid);
+		form.setUserid(member.getUserid());
 		form.setUsername(member.getUsername());
 		form.setUserpw(member.getUserpw());
 		form.setUserphone(member.getUserphone());
 		form.setUseremail(member.getUseremail());
 		model.addAttribute("form", form);
 		
-		return "mypage/mypage_edit";
+		return "mypage/EditMember";
 	}
 	
 	//회원 정보 수정
@@ -96,13 +98,55 @@ public class MemberController {
 	
 	
 	// 로그인 
-	@GetMapping("/members/login")
-	public String login() {
-		return "members/login";
-	}
-	
-	
+		@GetMapping("/members/login")
+		public String loginForm() {
+			return "members/login";
+		}
+		
+		@PostMapping("/members/login")
+		public String login(@ModelAttribute Member member, HttpSession session) {
+			Member loginResult = memberService.login(member);
+			if (loginResult != null) {
+				//login 성공
+				session.setAttribute("loginId", loginResult.getUserid());
+				return "index";
+			} else {
+				// 실패
+				return "login";
+			}
+		}
+//	
+//	@PostMapping("/members/login")
+//	public String login(@ModelAttribute("form") MemberForm form, HttpSession session, Model model) {
+//		Member member = memberService.login(form);
+//		
+//		if (member != null) {
+//			// 로그인 성공 시 세션에 회원 정보 저장
+//			session.setAttribute("userid", member);
+//			return "redirect:/mypage"; // 로그인 후 이동할 페이지를 설정해주세요.
+//		} else {
+//			// 로그인 실패 시 에러 메시지 전달
+//			model.addAttribute("error", "아이디 또는 비밀번호가 올바르지 않습니다.");
+//			return "members/login";
+//		}
+//	}
 	// 로그아웃
 	
+    @PostMapping("/members/{userid}/logout")
+    public String logout(@PathVariable("userid") String userid, HttpSession session) {
+        // 세션에서 로그인 정보 제거
+        session.invalidate();
+        return "redirect:/";
+    }
+    
+    
+    //회원 탈퇴
+    @PostMapping("/members/{userid}/delete")
+    public String deleteMember(@PathVariable String userid, @ModelAttribute("member") Member form) {
+        memberService.deleteMember(userid, form);
+        return "redirect:/";
+    }
+    
+
 	
 }

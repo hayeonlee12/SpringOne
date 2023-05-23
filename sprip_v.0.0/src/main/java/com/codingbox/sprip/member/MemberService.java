@@ -1,6 +1,8 @@
 package com.codingbox.sprip.member;
 
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +25,6 @@ public class MemberService {
 	// 아이디 중복체크
     public int overlappedID(Member member) throws Exception{
 		int result = memberRepository.overlappedID(member);
-		System.out.println("service" + result);
 		return result;
 	}
 
@@ -45,6 +46,39 @@ public class MemberService {
 		return findMember;
 	}
 	
+	// 로그인
+	
+	public Member login(Member member) {
+		Optional<MemberEntity> byUserid = memberRepository.findByUserid(member.getUserid());
+		if (byUserid.isPresent()) {
+			MemberEntity memberEntity = byUserid.get();
+			if (memberEntity.getUserpw().equals(member.getUserpw())) {
+				Member dto = Member.toMember(memberEntity);
+				return dto;
+			} else {
+				return null;
+			}
+		} else {
+			return null;
+			
+		}
+		
+	}
 	
 	
+	// 로그아웃
+	
+	
+	
+	// 회원탈퇴기능
+	@Transactional
+	public void deleteMember(String userid, Member form) {
+	    Member member = memberRepository.findOne(form.getUserid());
+	    System.out.println(member);
+	    if (member != null) {
+	    	System.out.println("service : " + member.getUserid());
+	        memberRepository.delete(member);
+	    }
+	}
+
 }
